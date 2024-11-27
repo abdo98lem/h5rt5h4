@@ -5,21 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Project</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #007BFF;
+        }
+        p {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Navigation Styles */
+        nav {
+            margin: 20px 0;
         }
         nav a {
+            display: inline-block;
             margin: 10px;
-            text-decoration: none;
             padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1rem;
+            color: #fff;
             background-color: #007BFF;
-            color: white;
             border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
         }
         nav a:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
         }
     </style>
 </head>
@@ -31,6 +61,6 @@
         <a href="mx (3).html">MX (3)</a>
         <a href="Multi-Tool Page.html">Multi-Tool Page</a>
     </nav>
-    <p>Click on a link above to navigate to different sections of the project.</p>
+    <p>Select a section to explore the various tools and features of this project.</p>
 </body>
 </html>
