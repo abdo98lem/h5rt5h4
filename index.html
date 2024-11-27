@@ -7,40 +7,69 @@
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f9;
+            font-family: "Roboto", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
             color: #333;
             line-height: 1.6;
             text-align: center;
         }
-        h1 {
-            font-size: 2rem;
-            color: #007BFF;
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px 10px;
         }
-        p {
-            margin-top: 10px;
-            color: #555;
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.1rem;
+            color: #e1e8ed;
         }
 
         /* Navigation Styles */
         nav {
-            margin: 20px 0;
+            margin: 30px 0;
         }
         nav a {
             display: inline-block;
             margin: 10px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
             font-size: 1rem;
             color: #fff;
             background-color: #007BFF;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.2s;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
         }
         nav a:hover {
             background-color: #0056b3;
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+            color: #555;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
 
         /* Responsive Design */
@@ -48,19 +77,37 @@
             nav a {
                 display: block;
                 margin: 10px auto;
-                width: 80%;
+                width: 90%;
+                font-size: 1.1rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Project</h1>
+    <header>
+        <h1>Welcome to Sysbase Pages Project</h1>
+        <p>Your one-stop destination for amazing tools and resources.</p>
+    </header>
+
     <nav>
+        <a href="Tools.html">Tools (extract ip&domains)</a><a href="Multi-Tool Page.html">Multi-Tool Page <span style="font-size:10px;">(Insert Custom Random Element and Wrap HTML Entities)</spn></a><br>
         <a href="Remove Lines Containing Text.html">Remove Lines Containing Text</a>
-        <a href="Tools.html">Tools</a>
-        <a href="mx (3).html">MX (3)</a>
-        <a href="Multi-Tool Page.html">Multi-Tool Page</a>
+        
+        <a href="mx (3).html">MX Check</a>
+        
     </nav>
-    <p>Select a section to explore the various tools and features of this project.</p>
+
+    <footer>
+        &copy; 2024 Multi-Tool Page. <a href="https://t.me/Lemmtouni">Contact Us</a>
+        </p>
+    </footer>
 </body>
 </html>
