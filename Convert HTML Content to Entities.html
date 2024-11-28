@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert HTML Content to Entities</title>
+</head>
+<body>
+    <h1>Convert Content Between Tags to HTML Entities</h1>
+    
+    <!-- Input Section -->
+    <textarea id="htmlInput" rows="8" cols="50">
+<div>Hello & Welcome to <span>OpenAI!</span></div>
+    </textarea>
+    <br>
+    <button onclick="convertToHTMLEntities()">Convert</button>
+    <br><br>
+
+    <!-- Output Section -->
+    <h2>Converted Output:</h2>
+    <textarea id="htmlOutput" rows="8" cols="50" readonly></textarea>
+
+    <script>
+        function convertToHTMLEntities() {
+            const inputHTML = document.getElementById('htmlInput').value;
+
+            // Create a temporary DOM element to parse the HTML
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = inputHTML;
+
+            // Recursive function to process each node
+            function processNode(node) {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    // Encode the text content of the node
+                    const text = node.nodeValue;
+                    node.nodeValue = text.replace(/[\u00A0-\u9999<>&]/gim, function (i) {
+                        return `&#${i.charCodeAt(0)};`;
+                    });
+                } else if (node.nodeType === Node.ELEMENT_NODE) {
+                    // Process child nodes recursively
+                    Array.from(node.childNodes).forEach(processNode);
+                }
+            }
+
+            // Start processing from the top-level nodes
+            Array.from(tempDiv.childNodes).forEach(processNode);
+
+            // Set the output HTML
+            document.getElementById('htmlOutput').value = tempDiv.innerHTML;
+        }
+    </script>
+</body>
+</html>
